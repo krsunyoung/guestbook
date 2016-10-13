@@ -93,7 +93,7 @@ public class GuestbookDao {
 		try {
 			conn = getConnection();
 			stmt = conn.createStatement();
-			String sql = "select no, name, content, password ,to_char(sysdate,'yyyy-mm-dd hh:mi:ss') from GUESTBOOK order by req_date desc";
+			String sql = "select no, name, content, password ,to_char(req_date,'yyyy-mm-dd hh:mi:ss') from GUESTBOOK order by req_date desc";
 			rs = stmt.executeQuery(sql);
 			
 			while(rs.next()){

@@ -29,20 +29,23 @@
 	</form>
 	<br>
 		<%
+		int count=-1;
 		for(GuestbookVo vo : list){
+			count++;
 		%>
 	<table width=510 border=1>
 		<tr>
-			<td>[<%=vo.getNo() %>]</td>
+			<td>[<%=list.size() - count %>]</td>
 			<td><%=vo.getName() %></td>
 			<td><%=vo.getReq_date() %></td>
 			<td><a href="deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
 		</tr>
 		<tr>
-			<td colspan=4><%=vo.getContent()%></td>
+			<td colspan=4><%=vo.getContent().replace("\n", "<br/>")%></td>
 		</tr>
 	</table>
 	<br>
+						
 		<% } %>
 	
 </body>

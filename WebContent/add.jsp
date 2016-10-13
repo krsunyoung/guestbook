@@ -8,6 +8,7 @@
 	String password = request.getParameter("password");
 	String content = request.getParameter("content");
 	
+	
 	GuestbookVo vo = new GuestbookVo();
 	vo.setName(name);
 	vo.setContent(content);

@@ -15,8 +15,8 @@ public class GuestbookTest {
 	}
 	public static void insertDao(){
 		GuestbookVo vo = new GuestbookVo();
-		vo.setName("콜콜2");
-		vo.setContent("마이콜~22222");
+		vo.setName("콜콜");
+		vo.setContent("마이콜~");
 		vo.setPassword("456");
 		
 		GuestbookDao dao = new GuestbookDao();
